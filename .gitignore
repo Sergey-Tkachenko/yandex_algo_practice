@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# ignore .idea
+.idea/
+
+# no need in tracking notes
+notes/
