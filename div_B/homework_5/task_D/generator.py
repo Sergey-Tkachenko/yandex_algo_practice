@@ -42,15 +42,15 @@ def is_correct_seq(seq):
 #     in_seq = f.readline()
 #     print(is_correct_slow(in_seq))
 
-def random_seq_gen(l=2):
+def seq_gen(l=2):
     grid = [[0, 1]] * l
     for seq in itertools.product(*grid):
         s = "".join(["(" if seq[i] == 0 else ")" for i in range(len(seq))])
         yield s
 
 
-for i in range(20):
-    for seq in random_seq_gen(i):
+for i in range(25):
+    for seq in seq_gen(i):
         # print(seq)
         ans_slow = is_correct_slow(seq)
         ans = is_correct_seq(seq)
